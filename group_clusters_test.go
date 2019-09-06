@@ -1,4 +1,4 @@
-Grouppackage gitlab
+package gitlab
 
 import (
 	"fmt"
