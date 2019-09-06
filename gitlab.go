@@ -317,6 +317,7 @@ type Client struct {
 	Features              *FeaturesService
 	GitIgnoreTemplates    *GitIgnoreTemplatesService
 	GroupBadges           *GroupBadgesService
+	GroupClusters         *GroupClustersService
 	GroupIssueBoards      *GroupIssueBoardsService
 	GroupLabels           *GroupLabelsService
 	GroupMembers          *GroupMembersService
@@ -466,6 +467,7 @@ func newClient(httpClient *http.Client) *Client {
 	c.Features = &FeaturesService{client: c}
 	c.GitIgnoreTemplates = &GitIgnoreTemplatesService{client: c}
 	c.GroupBadges = &GroupBadgesService{client: c}
+	c.GroupClusters = &GroupClustersService{client: c}
 	c.GroupIssueBoards = &GroupIssueBoardsService{client: c}
 	c.GroupLabels = &GroupLabelsService{client: c}
 	c.GroupMembers = &GroupMembersService{client: c}
@@ -869,14 +871,6 @@ func Int(v int) *int {
 // to store v and returns a pointer to it.
 func String(v string) *string {
 	p := new(string)
-	*p = v
-	return p
-}
-
-// Time is a helper routine that allocates a new time.Time value
-// to store v and returns a pointer to it.
-func Time(v time.Time) *time.Time {
-	p := new(time.Time)
 	*p = v
 	return p
 }

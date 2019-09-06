@@ -43,6 +43,7 @@ to add new and/or missing endpoints. Currently the following services are suppor
 - [x] Group Milestones
 - [x] Group-Level Variables
 - [x] Groups
+- [x] Group Clusters
 - [x] Issue Boards
 - [x] Issues
 - [x] Jobs
