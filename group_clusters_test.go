@@ -158,7 +158,7 @@ func TestAddGroupCluster(t *testing.T) {
 		fmt.Fprint(w, response)
 	})
 
-	cluster, _, err := client.GroupClusters.AddCluster(gid, &AddClusterOptions{})
+	cluster, _, err := client.GroupClusters.AddCluster(gid, &AddGroupClusterOptions{})
 
 	if err != nil {
 		t.Errorf("GroupClusters.AddCluster returned error: %v", err)
@@ -210,7 +210,7 @@ func TestEditGroupCluster(t *testing.T) {
 		fmt.Fprint(w, response)
 	})
 
-	cluster, _, err := client.GroupClusters.EditCluster(gid, 24, &EditClusterOptions{})
+	cluster, _, err := client.GroupClusters.EditCluster(gid, 24, &EditGroupClusterOptions{})
 
 	if err != nil {
 		t.Errorf("GroupClusters.EditCluster returned error: %v", err)
